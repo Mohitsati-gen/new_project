@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+  color: #D8DCE8;
+}
+
+*:focus-visible {
+  outline: 3px solid #FFB454;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.glow-orb {
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.diagonal-cut {
+  clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 96%);
+}
